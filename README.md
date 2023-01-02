@@ -1,7 +1,7 @@
 # AMS_prediction
 
 1.1 **Overview**
-The repository forms the processes followed in predicting the average monthly sales of items at a given depot. It hosts codes contained in diferent files. 
+<p> The repository forms the processes followed in predicting the average monthly sales of items at a given depot. It hosts codes contained in diferent files.</p> 
 
 2.1 **app.py**
 The app.py contains in details the API codes by calling the model.py. The app.py hosts codes used to deploy a basic Streamlit web application(a simple and powerful app model that lets you build rich UIs incredibly quickly). 
