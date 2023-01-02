@@ -11,7 +11,7 @@ This app is used to show the predicted **Average Monthly Sales** of Product at a
 """)
 
 #create variable for locaions from train df
-path = 'utils\data\data-1671661749260.csv'
+path = 'data-1671661749260.csv'
 
 
 df = pd.read_csv(path)
