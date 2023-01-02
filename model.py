@@ -20,31 +20,31 @@ def model_train(data, prepped_data, month):
 
     u = month
     if u == 4:
-        # select data for july, august, september, october and November for training
+        # select data for january, february, march for training
         df_slice = df[(df['month']==1) | (df['month']==2) | (df['month']==3)].reset_index(drop=True)
     elif u == 5:
-        # select data for july, august, september, october and November for training
+        # select data for february, march, april for training
         df_slice = df[(df['month']==2) | (df['month']==3) | (df['month']==4)].reset_index(drop=True)
     elif u == 6:
-        # select data for july, august, september, october and November for training
+        # select data for march, april, may for training
         df_slice = df[(df['month']==3) | (df['month']==4) | (df['month']==5)].reset_index(drop=True)
     elif u == 7:
-        # select data for july, august, september, october and November for training
+        # select data for april, may, june for training
         df_slice = df[(df['month']==4) | (df['month']==5) | (df['month']==6)].reset_index(drop=True)
     elif u == 8:
-        # select data for july, august, september, october and November for training
+        # select data for may, june, july for training
         df_slice = df[(df['month']==5)| (df['month']==6) | (df['month']==7)].reset_index(drop=True)
     elif u == 9:
-        # select data for july, august, september, october and November for training
+        # select data for june, july, august for training
         df_slice = df[(df['month']==6) | (df['month']==7) | (df['month']==8)].reset_index(drop=True)
     elif u == 10:
-        # select data for july, august, september, october and November for training
+        # select data for july, august, september for training
         df_slice = df[(df['month']==7) | (df['month']==8) | (df['month']==9)].reset_index(drop=True)
     elif u == 11:
-        # select data for july, august, september, october and November for training
+        # select data for august, september, october for training
         df_slice = df[(df['month']==8) | (df['month']==9) | (df['month']==10)].reset_index(drop=True)
     elif u == 12:
-        # select data for july, august, september, october and November for training
+        # select data for september, october, November for training
         df_slice = df[(df['month']==9) | (df['month']==10) | (df['month']==11)].reset_index(drop=True)
     else:
         df_slice = df[df['month'] != u]
