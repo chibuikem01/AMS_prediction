@@ -12,3 +12,10 @@ The app.py contains in details the API codes by calling the model.py. The app.py
 4.1 **model deployment**
 The model's api was deployed on Heroku to retrieve a url where predictions could be make for the average monthly sales. Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
 Below is the api interface where the various inputs are required for a prediction.
+
+<p align='center'>
+   <img src="images/streamlit_outpt.jpg"
+   alt='API prediction UI'
+   width=700px/>
+   <br>
+</p>
