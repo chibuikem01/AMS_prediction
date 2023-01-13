@@ -16,7 +16,7 @@ def model_train(data, prepped_data, month):
     df['depot'] = np.where(df.depot == 'FUNT','IWO',df.depot)
     #drop region and year data as they have zero variance (a single values for all observations)
     
-
+    
 
     u = month
     if u == 4:
@@ -70,19 +70,19 @@ def model_train(data, prepped_data, month):
     x_train,x_test, y_train, y_test = train_test_split(X, y, test_size = 0.10, random_state=42)
 
     # instantiate several models to test which one fits the data
-    lr = RandomForestRegressor(random_state = 43)
-    model_lr = lr.fit(x_train, y_train)
+    rf = RandomForestRegressor(random_state = 43)
+    model_rf = rf.fit(x_train, y_train)
 
     #evaluate random_forest
-    pred_lr = model_lr.predict(x_test)
-    rmse = np.sqrt(mean_squared_error(y_test, pred_lr))
-    r2score = r2_score(y_test, pred_lr)
+    pred_rf = model_rf.predict(x_test)
+    rmse = np.sqrt(mean_squared_error(y_test, pred_rf))
+    r2score = r2_score(y_test, pred_rf)
 
     result_dict = {"Random Forest RMSE: NT": rmse,
                     "Accuracy": r2score}
 
-    lr1 = RandomForestRegressor()
-    lr1.fit(X, y)
-    result = lr1.predict([pred_x])
+    rf1 = RandomForestRegressor()
+    rf1.fit(X, y)
+    result = rf1.predict([pred_x])
 
     return result_dict, result[0].tolist()
